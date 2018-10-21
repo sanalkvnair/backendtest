@@ -40,7 +40,7 @@ public class RecipeServiceImpl implements RecipeService {
 	}
 
 	@Override
-	public Recipe createRecipe(Recipe recipe) {
+	public Recipe createOrUpdateRecipe(Recipe recipe) {
 		try {
 			return recipeRepository.save(recipe);
 		}catch(DataIntegrityViolationException e) {
@@ -48,7 +48,7 @@ public class RecipeServiceImpl implements RecipeService {
 			throw new NotFoundException("Ingredient");
 		}
 	}
-
+	
 	@Override
 	public Recipes searchRecipe(String name) {
 		return new Recipes(recipeRepository.findByNameIgnoreCaseContaining(name));

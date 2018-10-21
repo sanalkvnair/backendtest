@@ -127,7 +127,7 @@ public class RecipeApiController {
 	 * @param query
 	 * @return List of Ingredients
 	 */
-	@ApiOperation(value = "Get all ingredients list, eles search for ingredients using query parameter", response = ResponseEntity.class)
+	@ApiOperation(value = "Get all ingredients list, else search for ingredients using query parameter", response = ResponseEntity.class)
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "OK"),
 			@ApiResponse(code = 404, message = "Resource not found.")
@@ -179,7 +179,7 @@ public class RecipeApiController {
 	 * @param ingredient
 	 * @return Ingredient
 	 */
-	@ApiOperation(value = "Update ingredient name", response = ResponseEntity.class)
+	@ApiOperation(value = "Update ingredient", response = ResponseEntity.class)
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "OK"),
 			@ApiResponse(code = 404, message = "Recipe not found.")
